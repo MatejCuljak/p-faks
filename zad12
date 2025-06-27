@@ -1,0 +1,15 @@
+#Definirati dvije funkcije koje kao parametar primaju ime ali vraćaju različitu poruku dobrodošlice.
+#Jedna neka ispisuje “Pozdrav {ime}!”, a druga “Dobrodošao {ime}!”
+#Jedna od funkcija neka bude definirana lambda izrazom, a druga standardnim načinom.
+#Zatim definiraj treću funkciju koja kao parametar prima naziv funkcije za ispis dobrodošlice i poziva je tako što pošalje vaše ime Pozvati treću funkciju prosljeđujući joj neku od prve dvije definirane funkcije.
+def pozdrav_ime(ime):
+    return f"Pozdrav {ime}!"
+def dobrodosao_ime(ime):
+    return f"Dobrodošao {ime}!"
+dobrodosao_ime_lambda = lambda ime: f"Dobrodošao {ime}!"
+def ispisi_dobrodoslicu(funkcija, ime):
+    print(funkcija(ime))
+# Pozivamo treću funkciju s prvim pozdravom
+ispisi_dobrodoslicu(pozdrav_ime, "Marko")
+# Pozivamo treću funkciju s drugim pozdravom
+ispisi_dobrodoslicu(dobrodosao_ime, "Ana")
